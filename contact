@@ -1,0 +1,41 @@
+
+<html>
+<head>
+	<title>Malhar Teli</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+<body>
+<div class="pagecenter">
+<nav class="navbar navbar-default navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header center">
+      <a class="navbar-brand" href="#">Malhar Teli</a>
+    </div>
+
+				<ul class="nav nav-tabs" role="tablist">
+						<li class="active"><a href="#">Home</a></li>
+						<li class="#about"><a href="about.html">About</a></li>
+						<li class="#contact"><a href="contact.html">Contact</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects
+								<span class="caret"></span>
+							</a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#">Games</a></li>
+									<li class="divider"></li>
+									<li><a href="#">Another Link</a></li>
+								</ul>
+						</li>
+					</ul>
+			</div>
+	</nav>
+</div>
+
+<div class"pagecenter center">
+	<div>
+	<h1>Hi</h1>
+</div>
+</div>
+
+</body>
+</html>

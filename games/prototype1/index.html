@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<title>HEART</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+
+<script src="game.js"></script>
+
+<div center><h1>HEART</h1></div>
+<div class=pagecenter>
+<p>Welcome to HEART! In this prototype, you play as the Terminal system, a system put in charge of resource management for a group of AI systems aboard a vessel. Your goal is to distribute your power amongst the subsystems and save the humans from starving out.</p>
+</div>
+<div>
+
+<script src="game.js"></script>
+
+<center><button onclick="startGame()">Click here to start</button></center>
+<p id="demo"></p>
+
+<div class=pagecenter>
+<div class=popbox>
+<table>
+	<tr>
+		<th class=boxp>Human Population</th>
+	</tr>
+	<tr>
+		<th class=boxp><p id="pop"></p></th>
+	</tr>
+</table>
+</div>
+<div class=restbox>
+<table class=boxp>
+	<tr>
+		<th>Points</th>
+		<th>Haptic</th>
+		<th>Empathetic</th>
+		<th>Adaptive</th>
+		<th>Reactive</th>
+	</tr>
+	<tr>
+		<th><p id="term"></p></th>
+		<th><p id="hap"></p></th>
+		<th><p id="emp"></p></th>
+		<th><p id="adp"></p></th>
+		<th><p id="rea"></p></th>
+	</tr>
+	<tr>
+		<th></th>
+		<th><button onclick="addHap()">+</button><button onclick="subHap()">-</button></th>
+		<th><button onclick="addEmp()">+</button><button onclick="subEmp()">-</button></th>
+		<th><button onclick="addAdp()">+</button><button onclick="subAdp()">-</button></th>
+		<th><button onclick="addRea()">+</button><button onclick="subRea()">-</button></th>
+	</tr>
+</table>
+</div>
+
+<br>
+<br>
+<table>
+	<tr>
+		<th><p>Food (lbs)</p></th>
+		<th><p>Power (watts)</p></th>
+	</tr>
+	<tr>
+		<th><p id="foodResc"></p></th>
+		<th><p id="enerRes"></p></th>
+	</tr>
+</table>
+<div class= "pagecenter">
+<button id="turnButton" onclick="endTurn()">Next Turn</button>
+
+<div class=scrollbox>
+	<p id="resp"></p>
+</div>
+
+</div>
+</div>
+</div>
+
+
+</body>
+<footer>
+</footer>
+
+</html>

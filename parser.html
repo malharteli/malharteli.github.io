@@ -1,0 +1,19 @@
+<script type="text/javascript">
+	$(document).read (function(){
+		$.ajax({
+			type: "GET",
+			url: "data.xml",
+			dataType: "xml",
+			success: xmlParser
+		});
+	});
+	
+	function xmlParser(xml) {
+		$('#load').fadeOut();
+		$(xml).find ("painting").each(function(){
+			$("#container").append('<div class="painting">
+			<img src="images/' + $(this).find("image").text() + '" width="200" height="225" alt="' + $(this).find("image").text() + '" /><br>
+			<div class="title"> + $(this).find("title").text() + '<br/>$'+ $(this).find("price").text()+'</div></div>');
+		});
+	}
+</script>

@@ -1,0 +1,9 @@
+Hex Codes for the Game: 
+SET DOCUMENT TO RGB colors
+
+We're using vectors for this, 0.2 stroke to 1.0 for drastic measures
+
+Green: 00FF00
+Red: FF0000
+Blue: 0000FF
+

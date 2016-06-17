@@ -1,0 +1,10 @@
+public final class Controller {
+	Scanner in;
+	Appendable out;
+	View view;
+	Model model;
+
+	public void run() throws IOException{
+				
+	}
+}

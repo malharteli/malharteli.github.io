@@ -1,0 +1,141 @@
+@charset "UTF-8";
+@import "bootstrap.css";
+
+@font-face {
+   font-family: Action; 
+   src: url('Action_Man.ttf');
+} 
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup,
+var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;padding: 0;border: 0;outline: 0 ;vertical - align: baseline;background: transparent
+}
+menu, nav, footer, section, figcaption, details, aside, article{
+	display:block
+}
+
+ul {
+    list - style: none
+}
+
+p{
+	color: black;
+}
+
+button{
+	outline-color: white;
+	position: 50%;
+}
+
+
+.pagecenter {
+		width: 80%;
+		max-width: 1024px;
+		margin:0 auto;
+		min-width: 512px;
+		}
+
+.center{
+		margin:0 auto;
+		text-align: center;
+		width:auto;
+		}
+
+.svg{
+	
+	position:absolute;
+	top: 0;
+	left: 0;
+	
+}
+		
+.chalkboard {
+	background-image:url("chalkboard-bg.jpg");
+	background-position:center;
+	background-repeat:repeat;
+	background-size:cover; 
+	position:relative;
+	user-select:none;
+	-moz-user-select:none;
+	-webkit-user-select:none;
+	
+}
+
+.chalkdraw{
+	background-image:url("chalkboard-texture.jpg");
+	background-position:center;
+	background-repeat:repeat;
+	background-blend-mode:color-dodge;
+}
+
+.title { 
+	mix-blend-mode: exclusion;
+	width: auto;
+	max-width: 100%;
+	
+}
+
+.aboutpanel{
+	fill:red;
+}
+
+.sidechalk {
+	mix-blend-mode:exclusion;
+	width:auto;
+	max-width:100%;
+}
+
+
+.chalktext{
+	font-family: Action;
+	opacity: 0.8;
+	color: white;
+
+}	
+
+.sidebar{
+	margin-left:5%;
+	margin-right:5%;
+	max-width:20%;
+	min-width:5%;
+	z-index:-9999;
+}
+
+.leftfloat{
+	float:left;
+}
+
+.rightfloat{
+	float:right;
+}
+
+.filler {
+	height:900px;
+}
+
+.padded {
+	max-height:40%;
+	min-height:20%;
+}
+
+.videoWrapper {
+	position:relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height:0;
+}
+
+.videoWrapper iframe {
+	position: absolute;
+	top:0;
+	left: 0;
+	width:100%;
+	height:100%;
+
+}
+
+@media only screen and (max-width 768px){
+	.title{	
+        max-width:80%;
+	}
+}

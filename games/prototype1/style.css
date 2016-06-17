@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	background-color:#000000;
+}
+h1 {
+
+	color:white;
+	font-family: 'Century Gothic', Arial, Helvetica, sans-serif;
+	font-size:80px;
+	text-align:center;
+}
+
+p {
+	color:white;
+	font-family: 'Arial Narrow', Arial, Helvetica, sans-serif;
+}
+
+.boxp {
+	color: white;
+	font-family: 'Arial Narrow', Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	text-align: center;
+}
+
+table {
+	text-align: center;
+	height: 50px;
+	border-style: dotted;
+	color: white;
+}
+
+.popbox{
+	margin:0 auto;
+	width: 25%;
+	float:left;
+}
+
+.restbox{
+	margin:5 auto;
+	width: 75%;
+}
+
+.pagecenter {
+	margin:0 auto;
+	text-align: center;
+	width: 75%;
+	float: center;
+}
+
+.center {
+	text-align: center;
+}
+
+.scrollbox {
+	height:240px;
+	width:auto;
+	border:1px solid #ccc;
+	border-style: dotted;
+	font:16px/26px Georgia, Garamond, Serif;
+	overflow:auto;
+	text-align: left;
+}
