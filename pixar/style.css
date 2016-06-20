@@ -6,6 +6,8 @@ html{
 	font-family:helvetica;
 	-webkit-text-size-adjust: 100%;
 		-ms-text-size-adjust: 100%;
+	font-color: #61cdf5;
+	background-color: #f6f6f6;
 }
 
 body {
@@ -31,8 +33,9 @@ footer {
 	}
 
 .pagecenter{
-	width: 1020px;
+	width: 1000px;
 	margin: 0 auto;
+	background-color: #FFF;
 	}
 
 .center{
@@ -56,9 +59,11 @@ footer {
 
 .home{
 	display:box;
-	background-color: #E0E0E0;
+	background-color: #f6f6f6;
 	padding-top: 25px;
 	padding-bottom: 25px;
+	border-bottom-style: solid;
+	border-bottom-color: #61cdf5;
 	width: auto;
 	height: auto;
 }
@@ -68,10 +73,10 @@ footer {
 	height: auto;
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
-	border-radius:50px;
-	border-style: dotted;
+	border-radius: 150px;
+	border-style: solid;
 	border-color: #000000;
-	transition-duration: 3s;
+	transition-duration: 1s;
 	transition-property:border-color, background-color, border-radius;
 }
 
@@ -79,6 +84,13 @@ footer {
 	border-color: blue;
 	border-radius: 100px;
 	background-color: orange;
+}
+
+.img-container{
+	vertical-align:middle;
+	overflow-x:scroll;
+	
+	
 }
 
 .artcontainer{
@@ -90,7 +102,8 @@ footer {
 	border-radius: 50px;
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
-	border-width: 1px;
+	border-width: 3px;
+	border-color: #61cdf5;
 	border-style: solid;
 }
 
