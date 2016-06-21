@@ -69,6 +69,7 @@ footer {
 }
 
 .sig{
+	float:left;
 	width:auto;
 	height: auto;
 	-moz-border-radius: 50px;

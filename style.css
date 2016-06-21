@@ -77,6 +77,15 @@ third{
 
 }
 
+.navbar{
+	padding-top: 5px;
+	background-color: #333;
+}
+
+.navbar-brand {
+	text-align:center;
+}
+
 p{
 
 }
@@ -370,7 +379,7 @@ p{
 	display: inline-block;
 	margin: 10px 5px 0 5px;
 	vertical-align:top;
-	height: 250px;
+	height: 5;
 }
 
 .og-grid li > a,
@@ -378,7 +387,7 @@ p{
 	border: none;
 	outline: none;
 	display: block;
-	position:relative;
+	position:center;
 }
 
 .og-grid li.og-expanded > a::after {
@@ -404,12 +413,13 @@ p{
 	margin-top: 10px;
 	text-aling: left;
 	height: 0;
-	overflow: hidden;
+	overflow: scroll;
 }
 
 .og-expander-inner{
 	padding: 50px, 30px;
 	height: 100%;
+
 }
 
 .og-close {
@@ -439,29 +449,28 @@ p{
 .og-close:hover::before,
 .og-close:hover::after {
 	background: #333;
-}
-
-.og-fullimg,
-.og-details {
-	width: 50%;
-	float: left;
-	height: 100%;
 	overflow: hidden;
 	position: relative;
+	padding: 0 0;
 }
 
 .og-details {
-	padding: 0 40px 0 20px;
+	float: bottom;
+	padding-right:2%;
 }
 
 .og-fullimg {
-	text-align: center;
+	padding-top: 2%;
+	padding-left:10%;
+	padding-right:10%;
+	width:80%;
+	float:center;
 }
 
 .og-fullimg img {
 	display: inline-block;
-	max-height: 100%;
 	max-width: 100%;
+	
 }
 
 .og-details h3 {
@@ -515,12 +524,6 @@ p{
 	animation: loader 0.5s infinite ease-in-out both;
 }
 
-@keyframes loader {
-	0% { background: #ddd; }
-	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
-	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
-}
-
 @-webkit-keyframes loader {
 	0% { background: #ddd; }
 	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
@@ -545,6 +548,12 @@ p{
 	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
 }
 
+@keyframes loader {
+	0% { background: #ddd; }
+	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+}
+
 @media screen and (max-width: 830px) {
 
 	.og-expander h3 { font-size: 32px; }
@@ -561,6 +570,27 @@ p{
 }
 
 /*end og-grid*/
+
+
+.sig{
+	position-x:50%;
+	width:auto;
+	height: auto;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 150px;
+	border-style: solid;
+	border-color: #000000;
+	transition-duration: 1s;
+	transition-property:border-color, background-color, border-radius;
+}
+
+.sig:focus, .sig:active, .sig:hover{
+	border-color: blue;
+	border-radius: 100px;
+	background-color: orange;
+}
+
 
 /*fadein */
 .fadein {
