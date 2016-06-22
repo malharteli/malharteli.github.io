@@ -161,6 +161,8 @@ $.fn.imagesLoaded = function( callback ) {
 	return deferred ? deferred.promise( $this ) : $this;
 };
 
+
+
 var Grid = (function() {
 	
 		// list of items
@@ -302,7 +304,7 @@ var Grid = (function() {
 			//not in the same ul
 			if (parent !== preview.Parent){
 				if (position < previewPos){
-					scrollExtra = preview.height;
+					scrollExtra = 0;
 				}
 				hidePreview();
 			}
@@ -310,7 +312,7 @@ var Grid = (function() {
 			if( previewPos != position ) {
 				// if position > previewPos then we need to take te current preview´s height in consideration when scrolling the window
 				if( position > previewPos ) {
-					scrollExtra = preview.height;
+					scrollExtra = 0;
 				}
 				hidePreview();
 			}
@@ -356,7 +358,8 @@ var Grid = (function() {
 			this.$title = $( '<h3></h3>' );
 			this.$description = $( '<p></p>' );
 			this.$href = $('' );
-			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
+			this.$content = $('')
+			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href, this.$content);
 			this.$loading = $( '<div class="og-loading"></div>' );
 			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
 			this.$closePreview = $( '<span class="og-close"></span>' );
@@ -379,8 +382,11 @@ var Grid = (function() {
 			if( current !== -1 ) {
 				var $currentItem = $items.eq( current );
 				$currentItem.removeClass( 'og-expanded' );
+				$currentItem.addClass('og-hidden');
 				this.$item.addClass( 'og-expanded' );
+				this.$item.removeClass('og-hidden');
 				// position the preview correctly
+				this.positionPreview();
 				this.positionPreview();
 			}
 
@@ -389,16 +395,18 @@ var Grid = (function() {
 
 			// update preview´s content
 			var $itemEl = this.$item.children( 'a' ),
+				$itemCt = this.$item.children( 'div'),
 				eldata = {
 					href : $itemEl.attr( 'href' ),
 					largesrc : $itemEl.data( 'largesrc' ),
 					title : $itemEl.data( 'title' ),
-					description : $itemEl.data( 'description' )
-				};
+					description : $itemEl.data( 'description' ),
+					content : $itemCt
+					};
 
 			this.$title.html( eldata.title );
 			this.$description.html( eldata.description );
-			this.$href.attr( 'href', eldata.href );
+			this.$href.attr( 'href', eldata.href );;
 
 			var self = this;
 			
@@ -428,8 +436,9 @@ var Grid = (function() {
 			setTimeout( $.proxy( function() {	
 				// set the height for the preview and the item
 				this.setHeights();
+				this.$item.children('div').removeClass('og-hidden');
 				// scroll to position the preview in the right place
-				this.positionPreview();
+				//this.positionPreview();
 			}, this ), 25 );
 
 		},
@@ -441,6 +450,7 @@ var Grid = (function() {
 						$( this ).off( transEndEventName );
 					}
 					self.$item.removeClass( 'og-expanded' );
+					self.$item.children('div').addClass( 'og-hidden');
 					self.$previewEl.remove();
 					self.$item.css('height', 250);
 				};
@@ -504,7 +514,7 @@ var Grid = (function() {
 			// case 2 : preview height + item height does not fit in window´s height and preview height is smaller than window´s height
 			// case 3 : preview height + item height does not fit in window´s height and preview height is bigger than window´s height
 			var position = this.$item.data( 'offsetTop' ),
-				previewOffsetT = this.$previewEl.offset().top - scrollExtra,
+				previewOffsetT = this.$previewEl.offset().top,
 				scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= winsize.height ? position : this.height < winsize.height ? previewOffsetT - ( winsize.height - this.height ) : previewOffsetT;
 			
 			$body.animate( { scrollTop : scrollVal }, settings.speed );

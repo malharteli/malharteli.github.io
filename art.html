@@ -50,7 +50,7 @@
 			<ul class="og-grid">
 				<div id="designwork">
 					<header>
-						<h2>Asset Design</h2>
+						<h2>2D Painting</h2>
 					</header>
 					<li>
 						<a data-largesrc="images/Eagle-000.png" data-title="The Eagle" data-description="Painted Portrait of a character down in a style based on a French Renaissance painting, albeit better lit.">
@@ -145,14 +145,25 @@
 					</li>
 				</div>
 			</ul>
-				
-
-
 			</div>
+
+			<div class="mt-over">
+				<div class= "mt-datahidden">
+					<img src="images/TheTempest-Crouwel2.jpg">
+				</div>
+				<img src="images/thumbs/Eagle-000">
+			</div>
+			<script>
+				$( ".mt-over" ).click(function(){
+					$(this).find(".mt-datahidden").addClass("mt-nothidden").removeClass("mt-datahidden")
+					});
+			</script>
+			
 		</div><!-- /container -->
 				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="js/grid.js"></script>
 		<script>
+
 			$(function() {
 				Grid.init();
 			});
