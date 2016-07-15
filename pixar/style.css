@@ -69,7 +69,6 @@ footer {
 }
 
 .sig{
-	float:left;
 	width:auto;
 	height: auto;
 	-moz-border-radius: 50px;
@@ -99,13 +98,7 @@ footer {
 	align: center;
 	padding-left:10px;
 	padding-right:10px;
-	padding-bottom: 25px;
-	border-radius: 50px;
-	-moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-width: 3px;
-	border-color: #61cdf5;
-	border-style: solid;
+	padding-bottom: 5px;
 }
 
 

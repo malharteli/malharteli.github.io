@@ -387,7 +387,6 @@ var Grid = (function() {
 				this.$item.removeClass('og-hidden');
 				// position the preview correctly
 				this.positionPreview();
-				this.positionPreview();
 			}
 
 			// update current value
@@ -396,17 +395,18 @@ var Grid = (function() {
 			// update preview´s content
 			var $itemEl = this.$item.children( 'a' ),
 				$itemCt = this.$item.children( 'div'),
+				$content = this.$item.children('div'),
 				eldata = {
 					href : $itemEl.attr( 'href' ),
 					largesrc : $itemEl.data( 'largesrc' ),
 					title : $itemEl.data( 'title' ),
 					description : $itemEl.data( 'description' ),
-					content : $itemCt
+					content : $content,
 					};
 
 			this.$title.html( eldata.title );
 			this.$description.html( eldata.description );
-			this.$href.attr( 'href', eldata.href );;
+			this.$href.attr( 'href', eldata.href );
 
 			var self = this;
 			
@@ -473,10 +473,11 @@ var Grid = (function() {
 			return false;
 
 		},
-		calcHeight : function() {
+		/*calcHeight : function() {
 
-			var heightPreview = winsize.height - this.$item.data( 'height' ) - marginExpanded,
+			var heightPreview = this.$item.data( 'height' ) - marginExpanded,
 				itemHeight = winsize.height;
+
 
 			if( heightPreview < settings.minHeight ) {
 				heightPreview = settings.minHeight;
@@ -487,6 +488,22 @@ var Grid = (function() {
 			this.itemHeight = itemHeight;
 
 		},
+		*/
+		calcHeight : function() {
+
+        var heightPreview = $('.og-details p').height() + this.$item.data( 'height' ) + marginExpanded,
+            itemHeight = heightPreview;
+
+        if( heightPreview < settings.minHeight ) {
+            heightPreview = settings.minHeight;
+            itemHeight = settings.minHeight + this.$item.data( 'height' ) + marginExpanded;
+
+        }
+
+        this.height = heightPreview;
+        this.itemHeight = itemHeight + this.$item.data( 'height' ) + marginExpanded ;
+
+    },
 		setHeights : function() {
 
 			var self = this,
@@ -515,9 +532,8 @@ var Grid = (function() {
 			// case 3 : preview height + item height does not fit in window´s height and preview height is bigger than window´s height
 			var position = this.$item.data( 'offsetTop' ),
 				previewOffsetT = this.$previewEl.offset().top,
-				scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= winsize.height ? position : this.height < winsize.height ? previewOffsetT - ( winsize.height - this.height ) : previewOffsetT;
-			
-			$body.animate( { scrollTop : scrollVal }, settings.speed );
+				scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= winsize.height ? position : this.height 
+
 
 		},
 		setTransition  : function() {
