@@ -657,7 +657,7 @@ p{
 	padding-top: 2%;
 	padding-left:10%;
 	padding-right:10%;
-	width:100%;
+	max-width:1020px;
 	float:center;
 }
 
