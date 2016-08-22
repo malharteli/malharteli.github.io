@@ -1,0 +1,4 @@
+﻿The game opens with a person asleep in their bed. Suddenly, Parasite Perry jumps in through the window, then jumps into the person’s head. The parasite takes control, but needs to directly control the lungs in order to keep breathing! An oxygen meter shows up, with a vertical gray-ish blue bar slowly going down. Once it’s about halfway down, a vibrating image appears: “Mash B to Breathe!” By mashing B, the bar goes up again.
+
+
+Eventually, a “level-up” message pops-up and ding is heard. The screen splits in half, and a skill tree appears in the bottom half. It has a flesh-colored background, and the skill tree resembles nerve endings. The bottommost nerve flashes: “Automated Breathing.” By clicking on it, the mash message disappears, the bar slowly goes back up, becomes full, and disappears.

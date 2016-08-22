@@ -1,0 +1,1 @@
+﻿Like in the intro, the player is laying on the bed asleep. This increases the [ENERGY] gauge. While they are sleeping, they can mash the [DREAM] button to get a lot of EXP. Dreams take the form of random colors and images appearing above the player in a thought bubble.
