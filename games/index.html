@@ -1,136 +1,385 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>Unity Web Player | SweetGreenPrototype</title>
-		<script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
-		<script type="text/javascript">
-		<!--
-		var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
-		if (document.location.protocol == 'https:')
-			unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
-		document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
-		-->
-		</script>
-		<script type="text/javascript">
-		<!--
-			var config = {
-				width: 960, 
-				height: 600,
-				params: { enableDebugging:"0" }
-				
-			};
-			var u = new UnityObject2(config);
 
-			jQuery(function() {
+<html>
+<head>
+	<title>Games</title>
+	<link href="../style.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.js"></script>
+<body>
+<div class="pagecenter">
+<nav class="navbar navbar-default navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header center">
+      <a class="navbar-brand" href="index.html">Malhar Teli</a>
+    </div>
 
-				var $missingScreen = jQuery("#unityPlayer").find(".missing");
-				var $brokenScreen = jQuery("#unityPlayer").find(".broken");
-				$missingScreen.hide();
-				$brokenScreen.hide();
-				
-				u.observeProgress(function (progress) {
-					switch(progress.pluginStatus) {
-						case "broken":
-							$brokenScreen.find("a").click(function (e) {
-								e.stopPropagation();
-								e.preventDefault();
-								u.installPlugin();
-								return false;
-							});
-							$brokenScreen.show();
-						break;
-						case "missing":
-							$missingScreen.find("a").click(function (e) {
-								e.stopPropagation();
-								e.preventDefault();
-								u.installPlugin();
-								return false;
-							});
-							$missingScreen.show();
-						break;
-						case "installed":
-							$missingScreen.remove();
-						break;
-						case "first":
-						break;
-					}
-				});
-				u.initPlugin(jQuery("#unityPlayer")[0], "HTML5.unity3d");
-			});
-		-->
-		</script>
-		<style type="text/css">
-		<!--
-		body {
-			font-family: Helvetica, Verdana, Arial, sans-serif;
-			background-color: white;
-			color: black;
-			text-align: center;
-		}
-		a:link, a:visited {
-			color: #000;
-		}
-		a:active, a:hover {
-			color: #666;
-		}
-		p.header {
-			font-size: small;
-		}
-		p.header span {
-			font-weight: bold;
-		}
-		p.footer {
-			font-size: x-small;
-		}
-		div.content {
-			margin: auto;
-			width: 960px;
-		}
-		div.broken,
-		div.missing {
-			margin: auto;
-			position: relative;
-			top: 50%;
-			width: 193px;
-		}
-		div.broken a,
-		div.missing a {
-			height: 63px;
-			position: relative;
-			top: -31px;
-		}
-		div.broken img,
-		div.missing img {
-			border-width: 0px;
-		}
-		div.broken {
-			display: none;
-		}
-		div#unityPlayer {
-			cursor: default;
-			height: 600px;
-			width: 960px;
-		}
-		-->
-		</style>
-	</head>
-	<body>
-		<p class="header"><span>Unity Web Player | </span>SweetGreenPrototype</p>
-		<div class="content">
-			<div id="unityPlayer">
-				<div class="missing">
-					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
-						<img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
-					</a>
-				</div>
-				<div class="broken">
-					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
-						<img alt="Unity Web Player. Install now! Restart your browser after install." src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />
-					</a>
-				</div>
+				<ul class="nav nav-tabs" role="tablist">
+						<li class="#home"><a href="index.html">Home</a></li>
+						<li class="#about"><a href="about.html">About</a></li>
+						<li class="#contact"><a href="contact.html">Contact</a></li>
+						<li class="dropdown active">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects
+								<span class="caret"></span>
+							</a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="portfolio.html">Main Portfolio</a></li>
+									<li class="divider"></li>
+									<li active><a href="../games/index.html">Games</a></li>
+									<li><a href="../art/index.html">Art</a></li>
+									<li><a href="animation.html">Animation</a></li>
+									<li><a href="portfolio.html">Photography</a></li>
+									<li><a href="portfolio.html">Experiments</a></li>
+						</li>
+					</ul>
 			</div>
+	</nav>
+</div>
+
+<div class="pagecenter container-fluid">
+	<ul class="mt-grid">
+		<div id="gamework" class="gamegrid">
+			<header>
+				<h2>Games</h2>
+			</header>
+			<li>
+				<div id="adisorganizedsport" class="toggle">
+					<img src="../images/adisorganizedgif.gif" height="250" data-src="holder.js/300x300" alt="An A">
+					<h3>A Disorganized Sport</h3>
+					<div class="mt-toggle">
+						<div class="og-expander" style="transition: height 350ms ease; height: auto;">
+						<div class="og-expander-inner pagecenter"><close><span class="og-close"></span></close>
+						<div class="og-fullimg"><div class="og-loading" style="display: none;"></div>
+							<div id="disorganized-sport" class="carousel slide">
+								<ol class="carousel-indicators">
+									<li data-target="#disorganized-sport" data-slide-to="0" class="active"></li>
+									<li data-target="#disorganized-sport" data-slide-to="1"></li>
+									<li data-target="#disorganized-sport" data-slide-to="2"></li>
+									<li data-target="#disorganized-sport" data-slide-to="3"></li>
+								</ol>
+								<!-- Carousel items-->
+								<div class="carousel-inner" role="listbox">
+									<div class="active item">
+										<div class="videoWrapper">
+											<iframe width="720" height="480" src="https://www.youtube.com/embed/YfM0Ny7phKg" frameborder="0" allowfullscreen></iframe>
+									</div>
+									</div>
+									<div class="item">
+										<img src="../images/disorganizedsport000.png" alt="a title screen for A Disorganized Title Screen">
+									</div>
+									<div class="item">
+										<img src="../images/disorganizedsport001.png">
+									</div>
+									<div class="item">
+										<img src="../images/disorganizedsport002.png">
+									</div>
+								</div>
+							<!-- Navbars -->
+							<a class="carousel-control left" href="#disorganized-sport" data-slide="prev">
+							&lsaquo;
+							</a>
+							<a class="carousel-control right" href="#disorganized-sport" data-slide="next">
+							&rsaquo;
+							</a>
+							</div>
+						</div>
+						<div class="og-details">
+							<h3>A Disorganized Sport</h3>
+							<p>This is a Capstone project produced in conjunction with two team members. Designed logo and rule icons used in the procedural rule generator</p>	
+						</div>
+						<div class="game-details">
+						<h3>Role: Artist</h3>
+						<p>I joined this project late in its development. The team was composed of two other incredibly skilled members, and I consider myself very lucky to have been a part of their group. This capstone project required a further layer of polish, which I helped provide with animated sprites, textures, and design strategies for communicating via images rather than words. I also put together the game's website.</p>
+						</div>
+						<p><a href="http://www.adisorganizedsport.com" class="btn btn-primary" role="button">Website here!</a></p>
+					</div>
+					</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div id="zom-d0s" class="toggle">
+					<img src="../images/zom-dos.gif" height="250" data-src="holder.js/300x300" alt="A blinking eye of red over a black form.">
+					<h3>Zom-D0S</h3>
+					<div class="mt-toggle">
+						<div class="og-expander" style="transition: height 350ms ease; height: auto;"><div class="og-expander-inner pagecenter"><close><span class="og-close"></span></close><div class="og-fullimg"><div class="og-loading" style="display: none;"></div>
+							<div id="zom-doscara" class="carousel slide">
+								<ol class="carousel-indicators">
+									<li data-target="#zom-doscara" data-slide-to="0" class="active"></li>
+									<li data-target="#zom-doscara" data-slide-to="1"></li>
+									<li data-target="#zom-doscara" data-slide-to="2"></li>
+									<li data-target="#zom-doscara" data-slide-to="3"></li>
+								</ol>
+								<!-- Carousel items-->
+								<div class="carousel-inner" role="listbox">
+									<div class="active item">
+										<img src="../images/zomDos000_title.png" alt="a title screen for Zom-D0S written in ascii">
+									</div>
+									<div class="item">
+										<img src="../images/zomDos000.png">
+									</div>
+									<div class="item">
+										<img src="../images/zomDos001.png">
+									</div>
+									<div class="item">
+										<img src="../images/zomDos002.png">
+									</div>
+								</div>
+							<!-- Navbars -->
+							<a class="carousel-control left" href="#zom-doscara" data-slide="prev">
+							&lsaquo;
+							</a>
+							<a class="carousel-control right" href="#zom-doscara" data-slide="next">
+							&rsaquo;
+							</a>
+							</div>
+						</div>
+						<div class="og-details">
+							<h3>Zom-D0S</h3>
+							<p>The world has fallen apart. Ethereal beasts are all that remain of humanity. But you have two tools to keep you alive in this hellscape- an iron drone, capable of fighting these hellions... and a comp straight from the 80s. Good Luck.</p>
+						</div>
+						<div class="game-details">
+						<h3>Role: Art Director</h3>
+						<p>For this project, I served as the primary art director of a five-person team. Our group had been formed in a last minute scenario, and the result was an initially disorganized mess of an art team. As Art Director, it was my job to take the lead and establish a pipeline for all our asset creation. I was in charge of deciding everything: from the programs we used, to the resolutions we exported at, to the exact colors we were allowed to use. The end result is a game very reminiscent of old 80s vector-based games</p>
+						</div>
+						<p><a href="WebGL/index.html" class="btn btn-primary" role="button">Play it online here!</a></p>
+						</div></div>
+					</div>
+				</div>
+				
+			</li>
+			<li>
+				<div id="red" class="toggle">
+					<img src="../images/redeyecatch.gif" height="250" data-src="holder.js/300x300" alt="A bouncing sprite">
+					<h3>Red</h3>
+					<div class="mt-toggle">
+						<div class="og-expander" style="transition: height 350ms ease; height: auto;">
+						<div class="og-expander-inner pagecenter"><close><span class="og-close"></span></close>
+						<div class="og-fullimg"><div class="og-loading" style="display: none;"></div>
+							<div id="red-cara" class="carousel slide">
+								<ol class="carousel-indicators">
+									<li data-target="#red-cara" data-slide-to="0" class="active"></li>
+									<li data-target="#red-cara" data-slide-to="1"></li>
+									<li data-target="#red-cara" data-slide-to="2"></li>
+									<li data-target="#red-cara" data-slide-to="3"></li>
+									<li data-target="#red-cara" data-slide-to="4"></li>
+									<li data-target="#red-cara" data-slide-to="5"></li>
+								</ol>
+								<!-- Carousel items-->
+								<div class="carousel-inner" role="listbox">
+									<div class="active item">
+										<img src="../images/red000.png" alt="a title screen for Red">
+									</div>
+									<div class="item">
+										<img src="../images/red001.png">
+									</div>
+									<div class="item">
+										<img src="../images/red002.png">
+									</div>
+									<div class="item">
+										<img src="../images/red003.png">
+									</div>
+									<div class="item">
+										<img src="../images/red004.png">
+									</div>
+									<div class="item">
+										<img src="../images/red005.png">
+									</div>
+								</div>
+							<!-- Navbars -->
+							<a class="carousel-control left" href="#red-cara" data-slide="prev">
+							&lsaquo;
+							</a>
+							<a class="carousel-control right" href="#red-cara" data-slide="next">
+							&rsaquo;
+							</a>
+							</div>
+						</div>
+						<div class="og-details">
+							<h3>Red</h3>
+							<p>Created in GameMaker Studio, Red is a side-scrolling 2D action game that was developed as an experiment on game-based narrative</p>	
+						</div>
+						<div class="game-details">
+						<h3>Role: Background Artist</h3>
+						<p>As background artist for Red, I worked closely with the lead sprite artist to develop a style that was cohesive with the style of the character sprites. All static objects in the game were designed to match the youthful, spritely nature of the project, and had the project continued further, would have grown less saturated over time, with the outlines around objects growing blurry to match the morality of the player.</p>
+						</div>
+						<p><a href="games/Red_the_Game (3).zip" class="btn btn-primary" role="button">Download (.zip)</a></p>
+					</div>
+					</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div id="parasiteperry" class="toggle">
+					<img src="../images/Faceplant2.gif" height="250" data-src="holder.js/300x300" alt="A bouncing sprite">
+					<h3>Parasite Perry</h3>
+					<div class="mt-toggle">
+						<div class="og-expander" style="transition: height 350ms ease; height: auto;">
+						<div class="og-expander-inner pagecenter"><close><span class="og-close"></span></close>
+						<div class="og-fullimg"><div class="og-loading" style="display: none;"></div>
+							<div id="perry-cara" class="carousel slide">
+								<ol class="carousel-indicators">
+									<li data-target="#perry-cara" data-slide-to="0" class="active"></li>
+									<li data-target="#perry-cara" data-slide-to="1"></li>
+								</ol>
+								<!-- Carousel items-->
+								<div class="carousel-inner" role="listbox">
+									<div class="active item">
+										<img src="../images/perrygamescreen_000.png" alt="A man needs to breathe">
+									</div>
+									<div class="item">
+										<img src="../images/perrygamescreen_001.png">
+									</div>
+								</div>
+							<!-- Navbars -->
+							<a class="carousel-control left" href="#perry-cara" data-slide="prev">
+							&lsaquo;
+							</a>
+							<a class="carousel-control right" href="#perry-cara" data-slide="next">
+							&rsaquo;
+							</a>
+							</div>
+						</div>
+						<div class="og-details">
+							<h3>Parasite Perry</h3>
+							<p>A Java game was produced with the intent of creating a new and interesting interface for players. In order to play the game, please unzip it to a folder and run the .bat file.</p>	
+						</div>
+						<div class="game-details">
+						<h3>Role: Primary Artist</h3>
+						<p>As the only artist on this team, I had to work in two workflows for the sake of time. The first was the art for the interface. The interface is based on images taken of the human brain, with each button being represented as a neuron of the parasite's victim's brain. The other was the pixel-based animations that represent the hapless parasite in its body suit.</p>
+						</div>
+						<p><a href="games/parasitegame.zip" class="btn btn-primary" role="button">Download Zip here</a></p>
+					</div>
+					</div>
+				</div>
+				</div>
+			</li>
+			
+			
 		</div>
-		<p class="footer">&laquo; created with <a href="http://unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
-	</body>
+	</ul>
+	</div>
+
+	<div class="pagecenter container-fluid">
+	<ul class="mt-grid">
+		<div id="experiments" class="gamegrid">
+			<h3>Works in Progress</h3>
+			<li>
+				<div id="JusticeForceTactics" class="toggle">
+					<img src="../images/thumbs/JusticeForceTacticsSplash.png" height="250" data-src="holder.js/300x300" alt="Justice Force Splash Image">
+					<h3>Justice Force Tactics</h3>
+					<div class="mt-toggle">
+						<div class="og-expander" style="transition: height 350ms ease; height: auto;">
+						<div class="og-expander-inner pagecenter"><close><span class="og-close"></span></close>
+						<div class="og-fullimg"><div class="og-loading" style="display: none;"></div>
+							<div id="jft-cara" class="carousel slide" data-interval="false">
+								<ol class="carousel-indicators">
+									<li data-target="#jft-cara" data-slide-to="0" class="active"></li>
+									<li data-target="#jft-cara" data-slide-to="1"></li>
+									<li data-target="#jft-cara" data-slide-to="2"></li>
+									<li data-target="#jft-cara" data-slide-to="3"></li>
+									<li data-target="#jft-cara" data-slide-to="4"></li>
+									<li data-target="#jft-cara" data-slide-to="5"></li>
+									<li data-target="#jft-cara" data-slide-to="6"></li>
+								</ol>
+								<!-- Carousel items-->
+								<div class="carousel-inner" role="listbox">
+									<div class="item active">
+										<img src= "../images/SuperTeamcharacters002.jpg">
+										<div class="carousel-caption box bloutline"
+											<p></p>
+										</div>
+									</div>
+									<div class="item">
+										<img src="../images/justforcetactics00-sparkmaster.png">
+										<div class="carousel-caption box bloutline">
+											<h3>Sparkmaster</h3>
+											<p>The primary villain of Justice Force Tactics.</p>
+										</div>
+									</div>
+									<div class="item">
+										<img src="../images/justforcetactics01-minion.png">
+										<div class="carousel-caption box bloutline">
+											<h3>Minion</h3>
+											<p>One of the grunts planned for the game. The team set upon red as the base of the enemy team, resulting in a warmer palette for the minion</p>
+										</div>
+									</div>
+									<div class="item">
+										<img src="../images/justforcetactics02-elsa.png">
+										<div class="carousel-caption box bloutline">
+											<h3>Meredith Blane aka. Madame Frost</h3>
+											<p>One of the ideas the team had for a character was a damaged Superhero who failed their team in the past. While our plot was set aside in the interest of completing the game, we did end up keeping Madame Frost in the final build</p>
+										</div>
+									</div>
+									<div class="item">
+										<img src="../images/justforcetactics03-lasercowboy.png">
+										<div class="carousel-caption box bloutline">
+											<h3>Lancel d'Ore aka. The Kid</h3>
+											<p>When considering the many ways the player could affect the world the characters were in, we considered a long-range beam attack- the result was Laser Cowboy over here. Lancel was just a huge westerns nerd. As such, his costume was based off a cowboy costume he wore as a kid. It was a bit hard fitting the normally biege and red-toned colors of traditional cowboy garb to the cool palette the team decided to use for the player characters, but we managed to make it work in the end.</p>
+										</div>
+									</div>
+									<div class="item">
+										<img src="../images/justforcetactics04-magmagorilla.png">
+										<div class="carousel-caption box bloutline">
+											<h3>Magma Gorilla</h3>
+											<p>At first look, it would be easy to think of Magma Gorilla as just a hero made of stone. Actually, its a guy in a suit. The reason he's called "Gorilla" is because in use, the suits arms are so heavy, he has to support the rest of his body upon the fists of the mechanical suit.</p>
+										</div>
+									</div>
+									<div class="item">
+										<img src="../images/justforcetactics05-speedster.png">
+										<div class="carousel-caption box bloutline">
+											<h3>Vectorman</h3>
+											<p>The first character implemented into Justice Force Tactics, Vectorman had the power to move twice in one turn. He's considered a B-lister because he's too slow to break the sound barrier</p>
+										</div>
+									</div>
+								</div>
+							<!-- Navbars -->
+							<a class="carousel-control left" href="#jft-cara" data-slide="prev">
+							&lsaquo;
+							</a>
+							<a class="carousel-control right" href="#jft-cara" data-slide="next">
+							&rsaquo;
+							</a>
+							</div>
+						</div>
+						<div class="og-details">
+							<h3>Justice Force Tactics</h3>
+							<p>In a city ravaged by crime and constant peril, one brave intrepid player must step up and organize the perfect superhero team to answer all the larger than life threats that hover over their beloved city. This game takes tactics game play mechanics and applies them to a superhero setting. Each hero has their own special move that allows them to manipulate the battlefield as the player sees fit.</p>	
+						</div>
+						<div class="game-details">
+						<h3>Role: Producer/Art Director</h3>
+						<p>For this capstone project, I quickly found myself taking the primary directive role of the game. Every presentation had to be carefully constructed, every member of the group had to be constantly checked upon. The problem is, the game was scoped far beyond our capabilities within the few months we had. Despite this, I still continue to code and alter the game, trying to reach that original concept we started with.</p>
+						</div>
+						<p><a href="" class="btn btn-primary" role="button"></a></p>
+					</div>
+					</div>
+				</div>
+				</div>
+			</li>
+		</div>
+	</ul>
+	</div>
+	<script>
+				$('.carousel').carousel({
+					interval: false
+				});
+			
+				$('.toggle').click(function(){
+						if ($('div.mt-toggle').is(':visible') && $(this).children('div.mt-toggle').is(':hidden')){
+							$('div.mt-toggle').hide(300);
+						}
+	
+						$(this).children('div').show(300);
+				});
+
+				$('close').click(function(e){
+					$(this).parent('div').parent('div').parent('div.mt-toggle').hide(300);
+					e.stopPropagation();
+					});
+			</script>
+			
+</div>
+
+</body>
 </html>
