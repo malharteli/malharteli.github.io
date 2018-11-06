@@ -2117,6 +2117,12 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
     })
   })
 
+  
+  //linkbox class click functionality
+  $(".linkblock").click(function() {
+  window.location = $(this).find("a").attr("href"); 
+  return false;
+	})
 
 
 }(jQuery);

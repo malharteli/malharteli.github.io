@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="JS/slick-1.8.0/slick/slick.css">
+        <link rel="stylesheet" type="text/css" href="JS/slick-1.8.0/slick/slick-theme.css">
+		<style>
+		.container{
+			color:red;
+		
+		}
+		
+		.slideshow{
+			position:relative;
+			width:65%;
+			max-width: 500px;
+			margin: 2em auto;
+			float:center;
+			height:500px;
+		}
+		
+		</style>
+    </head>
+    <body>
+		<div class = "container">
+        <div class ="slideshow">
+            <div><img src="assets/lore.jpg"></div>
+            <div><img src="assets/summerlong.jpg"></div>
+            <div><img src="assets/theBookofDust.jpg"></div>
+            <div><img src="assets/whichwood.jpg"></div>
+        </div>
+		</div>
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src= "https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="JS/slick-1.8.0/slick/slick.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.slideshow').slick({
+                    arrows:true,
+                    centerMode:false
+
+                });
+            });
+        </script>
+
+		
+		
+    </body>
+</html>

@@ -951,7 +951,6 @@ img {
   line-height: 1.42857143;
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 4px;
   -webkit-transition: all .2s ease-in-out;
        -o-transition: all .2s ease-in-out;
           transition: all .2s ease-in-out;
@@ -2737,7 +2736,7 @@ select[multiple].input-lg {
           user-select: none;
   background-image: none;
   border: 1px solid transparent;
-  border-radius: 4px;
+  /*border-radius: 4px;*/
 }
 .btn:focus,
 .btn:active:focus,
@@ -2811,7 +2810,7 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: #fff;
-  background-color: #428bca;
+  background-color: #97959F;
   border-color: #357ebd;
 }
 .btn-primary:hover,
@@ -2820,8 +2819,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #fff;
-  background-color: #3071a9;
-  border-color: #285e8e;
+  background-color: #7A7883;
+  border-color: #4A4A50;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -2843,11 +2842,11 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #428bca;
-  border-color: #357ebd;
+  background-color: #97959F;
+  border-color: #99968A;
 }
 .btn-primary .badge {
-  color: #428bca;
+  color: #97959F;
   background-color: #fff;
 }
 .btn-success {
@@ -3052,7 +3051,7 @@ fieldset[disabled] .btn-link:focus {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33;
-  border-radius: 6px;
+  /*border-radius: 6px;*/
 }
 .btn-sm,
 .btn-group-sm > .btn {
@@ -3586,19 +3585,18 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 10px 15px;
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #eee;
+  background-color:;
 }
 .nav > li.disabled > a {
-  color: #777;
+  color:;
 }
 .nav > li.disabled > a:hover,
 .nav > li.disabled > a:focus {
-  color: #777;
+  color:;
   text-decoration: none;
   cursor: not-allowed;
   background-color: transparent;
@@ -3606,8 +3604,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus {
-  background-color: #eee;
-  border-color: #428bca;
+  background-color: #;
+  border-color: ;
 }
 .nav .nav-divider {
   height: 1px;
@@ -3619,7 +3617,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   max-width: none;
 }
 .nav-tabs {
-  border-bottom: 1px solid #ddd;
+  border-bottom:;
 }
 .nav-tabs > li {
   float: left;
@@ -3684,7 +3682,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .nav-tabs.nav-justified > .active > a,
   .nav-tabs.nav-justified > .active > a:hover,
   .nav-tabs.nav-justified > .active > a:focus {
-    border-bottom-color: #fff;
+    border-bottom-color: transparent;
   }
 }
 .nav-pills > li {
@@ -3746,13 +3744,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 @media (min-width: 768px) {
   .nav-tabs-justified > li > a {
-    border-bottom: 1px solid #ddd;
-    border-radius: 4px 4px 0 0;
+    /*border-bottom: 1px solid #ddd;
+    border-radius: 4px 4px 0 0;*/
   }
   .nav-tabs-justified > .active > a,
   .nav-tabs-justified > .active > a:hover,
   .nav-tabs-justified > .active > a:focus {
-    border-bottom-color: #fff;
+    border-bottom-color: transparent;
   }
 }
 .tab-content > .tab-pane {
@@ -3774,7 +3772,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 @media (min-width: 768px) {
   .navbar {
-    border-radius: 4px;
+    /*border-radius: 4px;*/
   }
 }
 @media (min-width: 768px) {
@@ -4587,9 +4585,9 @@ a.list-group-item.active > .badge,
   padding: 4px;
   margin-bottom: 20px;
   line-height: 1.42857143;
-  background-color: #fff;
+  background-color: #E6E3D5;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  /*border-radius: 4px;*/
   -webkit-transition: all .2s ease-in-out;
        -o-transition: all .2s ease-in-out;
           transition: all .2s ease-in-out;
@@ -6162,7 +6160,7 @@ button.close {
   }
   table.visible-print {
     display: table;
-  }
+  } 
   tr.visible-print {
     display: table-row !important;
   }
